@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root{
+    --white: hsl(0, 0%, 100%);
+    --tomato: hsl(4, 100%, 67%);
+    --charcoalGray: hsl(235, 18%, 26%);
+    --darkBluishPurple: hsl(232, 31%, 19%);
+    --gray: hsl(0, 1%, 71%);
+}
+
+html, body, input, button{
+    font-family: "Roboto", sans-serif;
+}
+html, body, ul{
+    padding: 0;
+}
+html, body{
+    margin: 0;
+    background: var(--charcoalGray);
+    color: var(--darkBluishPurple);
+}
+main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--white);
+    padding: 1.5em;
+    border-radius: 1.5em;
+}
+h1{
+    color: var(--darkBluishPurple);
+    font-size: 2.7em;
+}
+ul{
+    margin-bottom: 2em;
+}
+li, .descr{
+    font-size: .8em;
+}
+li{
+    line-height: 2em;
+    list-style: none;
+}
+li img{
+    margin-right: 1em;
+    transform: translateY(.4em);
+}
+label{
+    font-size: .8em;
+    font-weight: 700;
+    color: var(--darkBluishPurple);
+}
+button, input{
+    padding: 1em 0;
+    border-radius: .5em;
+    outline: none;
+}
+button{
+    cursor: pointer;
+    border: none;
+    color: var(--white);
+    background: var(--darkBluishPurple);
+    transition: .4s;
+}
+button:hover{
+    font-weight: 700;
+    background: linear-gradient(90deg, #FF537B, #FF693E);
+}
+input{
+    margin-top: .5em;
+    border: 1px solid var(--gray);
+    padding: 1em;
+}
+input:focus{
+    border: 1px solid var(--charcoalGray);
+}
+input.invalid{
+    border: 1px solid var(--tomato);
+    background: hsl(5, 100%, 95%);
+}
+span{
+    font-size: .8em;
+    font-weight: 700;
+}
+span{
+    color: var(--tomato);
+}
+input.invalid::placeholder{
+    color: var(--tomato);
+}
+h1{
+    margin: 0;
+}
+
+.firstScreen, .inputAndButton, .labelAndSpan{
+    display: flex;
+}
+.firstScreen{
+    align-items: center;
+}
+.illus{
+    width: 17em;
+}
+.signUpForm{
+    width: 23em;
+    margin-right: 2em;
+    transform: scale(.9);
+}
+.inputAndButton{
+    flex-direction: column;
+}
+.inputAndButton button{
+    margin-top: 1em;
+}
+.descr{
+    line-height: 1.5em;
+    max-width: 25em;
+}
+.secondScreen{
+    max-width: 19em;
+}
+.secondScreen{
+    padding: 1em;
+}
+.iconSuccess{
+    width: 3em;
+    margin-bottom: 1em;
+}
+.secondScreen h1{
+    line-height: 1em;
+}
+.descr2{
+    line-height: 1.5em;
+    font-size: .8em;
+}
+.secondScreen button{
+    margin-top: 1.7em;
+    width: 100%;
+}
+.labelAndSpan{
+    justify-content: space-between;
+}
+
+@media (max-width: 750px){
+    .firstScreen{
+        flex-direction: column;
+    }
+    .signUpForm {
+      order: 2;
+    }
+    .illus{
+        order: 1;
+        width: auto;
+        margin: auto;
+        display: block;
+    }
+    .signUpForm{
+        margin-right: 0;
+        margin-top: 2em;
+        transform: scale(1);
+    }
+    .descr{
+        max-width: max-content;
+    }
+}
+@media (max-width: 450px){
+    main{
+        width: 75%;
+    }
+    .illus, .signUpForm{
+        width: 100%;
+    }
+}

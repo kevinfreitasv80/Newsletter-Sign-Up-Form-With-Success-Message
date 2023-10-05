@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="./assets/style.css">
+    <script defer src="./assets/script.js"></script>
+    <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  </head>
+  <body>
+    <main>
+      <section class="firstScreen">
+        <section class="signUpForm">
+          <h1>Stay updated!</h1>
+          <p class="descr">Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul>
+            <li><img src="./assets/images/icon-list.svg" alt=""> Product discovery and building what matters</li>
+            <li><img src="./assets/images/icon-list.svg" alt=""> Measuring to ensure updates are a success</li>
+            <li><img src="./assets/images/icon-list.svg" alt=""> And much more!</li>
+          </ul>
+          <form action="#" method="post">
+            <div class="labelAndSpan">
+              <label for="inputEmail">Email address</label>
+              <span id="spanError"></span>
+            </div>
+            <article class="inputAndButton">
+              <input type="text" placeholder="email@company.com">
+              <button>Subscribe to monthly newsletter</button>
+            </article>
+          </form>
+        </section>
+        <picture>
+          <source srcset="./assets/images/illustration-sign-up-mobile.svg" media="(max-width: 750px)">
+          <img class="illus" src="./assets/images/illustration-sign-up-desktop.svg" alt="">
+        </picture>
+      </section>
+      <section class="secondScreen">
+        <img class="iconSuccess" src="./assets/images/icon-success.svg" alt="Icon success">
+        <h1>Thanks for subscribing!</h1>
+        <p class="descr2">A confirmation email has been sent to <strong>ash@loremcompany.com</strong>. Please open it and click the button inside to confirm your subscription.</p>
+        <button id="returnFirstScreen">Dismiss message</button>
+      </section>
+    </main>
+  </body>
+</html>
